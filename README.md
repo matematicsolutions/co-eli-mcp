@@ -1,5 +1,7 @@
 # co-eli-mcp
 
+<!-- mcp-name: io.github.matematicsolutions/co-eli-mcp -->
+
 MCP server for the datos.gov.co open-data record of decisions (sentencias) by
 the Colombian Constitutional Court (Corte Constitucional). Verifies whether a
 citation exists and returns its metadata.
