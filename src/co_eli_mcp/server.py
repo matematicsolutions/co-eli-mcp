@@ -20,6 +20,7 @@ import httpx
 from fastmcp import FastMCP
 from mcp.types import ToolAnnotations
 
+from . import runtime
 from .audit import AuditLogger, hash_input, timer
 from .citations import build_citation, parse_sentencia
 from .client import DEFAULT_BASE_URL, DatosGovClient
@@ -75,7 +76,7 @@ mcp: FastMCP = FastMCP(name="co-eli-mcp", instructions=INSTRUCTIONS)
 
 
 def _base_url() -> str:
-    return os.environ.get("CO_ELI_BASE_URL", DEFAULT_BASE_URL)
+    return os.environ.get("CO_ELI_BASE_URL", runtime.base_url("eli", DEFAULT_BASE_URL))
 
 
 def _audit() -> AuditLogger:
