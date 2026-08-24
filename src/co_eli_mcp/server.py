@@ -36,6 +36,7 @@ This MCP server exposes the datos.gov.co open-data record of decisions (sentenci
 
 ## Hard constraints
 
+- **Do not answer past the edge of this corpus** - when a search comes back empty, or the question touches material this connector does not carry, call `co_coverage` and relay what it says is missing. Absence here is not absence in the law.
 - **No full-text retrieval** - only metadata (proceso, expediente, magistrado ponente, sala, fecha). The `source_url` points to the public Corte Constitucional relatoria page where the full text lives.
 - **Every response has `human_readable_citation` + `source_url`** - cite both to the user.
 - **Audit log JSONL** - every tool call appends to `~/.matematic/audit/co-eli-mcp.jsonl`.
