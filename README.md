@@ -19,6 +19,7 @@ where the full decision text lives, but this connector does not fetch it.
 |---|---|
 | `co_search_sentencias` | Free-text search (e.g. by magistrado name or proceso type) |
 | `co_get_sentencia` | Exact lookup by citation, e.g. `"T-012/92"` - verifies it exists |
+| `co_coverage` | Declare what this connector covers, when each family was captured, and - explicitly - what it does NOT cover. Every gap carries a fallback. |
 
 Every response carries `lex_uri` and `source_url` (the public
 corteconstitucional.gov.co relatoria page) and `human_readable_citation`
